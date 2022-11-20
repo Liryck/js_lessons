@@ -1,3 +1,5 @@
+'use strict';
+
 const numberOfFilms = +prompt('Як багато фільмів Ви подивилися?', '');
 
 let personalMovieDB = {
@@ -181,3 +183,4 @@ for (let i=0; i <= lines; i++) {
     result += '\n';
 }
 console.log(result);
+
