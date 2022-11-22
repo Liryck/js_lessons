@@ -1,49 +1,49 @@
 
 
-const numberOfFilms = +prompt('Як багато фільмів Ви подивилися?', '');
+// const numberOfFilms = +prompt('Як багато фільмів Ви подивилися?', '');
 
-let personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
+// let personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
 
-// const a = prompt('Останніх переглянутих Вами фільмів?', ''),
-//       b = prompt('На скільки Ви його оцінете?', ''),
-//       c = prompt('Останніх переглянутих Вами фільмів?', ''),
-//       d = prompt('На скільки Ви його оцінете?', '');
+// // const a = prompt('Останніх переглянутих Вами фільмів?', ''),
+// //       b = prompt('На скільки Ви його оцінете?', ''),
+// //       c = prompt('Останніх переглянутих Вами фільмів?', ''),
+// //       d = prompt('На скільки Ви його оцінете?', '');
 
-//       personalMovieDB.movies[a] = b;
-//       personalMovieDB.movies[c] = d;
+// //       personalMovieDB.movies[a] = b;
+// //       personalMovieDB.movies[c] = d;
 
-for (let i = 0; i < 2; i++) {
-    const a = prompt('Останніх переглянутих Вами фільмів?', ''),
-          b = prompt('На скільки Ви його оцінете?', '');
+// for (let i = 0; i < 2; i++) {
+//     const a = prompt('Останніх переглянутих Вами фільмів?', ''),
+//           b = prompt('На скільки Ви його оцінете?', '');
 
-    if (a != null && b != null && a != '' && b != ' && a.lenght < 50') {
-        personalMovieDB.movies[a] = b;
-        console.log('done');
-    } else {
-        console.log('error');
-        i--;
-    }
+//     if (a != null && b != null && a != '' && b != ' && a.lenght < 50') {
+//         personalMovieDB.movies[a] = b;
+//         console.log('done');
+//     } else {
+//         console.log('error');
+//         i--;
+//     }
 
-    personalMovieDB.movies[a] = b;
-}
+//     personalMovieDB.movies[a] = b;
+// }
 
-if (personalMovieDB.count < 10) {
-    console.log("Переглянуто занадто мало фільмів");
-} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30 ) {
-    console.log("Ви молодець");
-} else if (personalMovieDB.count >= 30) {
-    console.log("Ви кіноман");
-} else {
-    console.log('Помилка');
-}
+// if (personalMovieDB.count < 10) {
+//     console.log("Переглянуто занадто мало фільмів");
+// } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30 ) {
+//     console.log("Ви молодець");
+// } else if (personalMovieDB.count >= 30) {
+//     console.log("Ви кіноман");
+// } else {
+//     console.log('Помилка');
+// }
 
-console.log(personalMovieDB);
+// console.log(personalMovieDB);
 
 // Задачи:
 // 1. При помощи цикла выведите числа от 5 до 10 в консоль. 5 и 10 включительно. Цикл можно использовать любой
@@ -209,3 +209,49 @@ console.log(personalMovieDB);
 // }
 // console.log(result);
 
+// Задачи:
+// 1) Создайте функцию, которая будет на вход принимать 1 аргумент с именем человека и возвращать строку.
+// Пример: вызов функции sayHello('Антон') возвращает строку "Привет, Антон!". В решении вызывать функцию не нужно, программа сделает это за вас.
+// 2) Создайте функцию, которая принимает в себя 1 аргумент в виде целого числа и возвращает массив из трех чисел: одно на 1 меньше, сам аргумент, и число на 1 больше.
+// Пример: вызов функции returnNeighboringNumbers(5) возвращает массив в виде [4, 5, 6].
+// 3) Создайте функцию, которая будет принимать в себя 2 аргумента, оба числа. Первое число - это база, второе число - это сколько раз нужно будет повторить это число в прогрессии. (Смотри пример ниже). Функция должна возвращать строку (или число в особых случаях, о которых ниже), где эти числа идут по порядку, разделенные тремя дефисами "---". После последнего числа их не должно быть.
+// Если второй аргумент не является числом, равен или меньше нуля - то возвращать просто первый аргумент. (Проверяем через оператор typeof)
+// Примеры:
+// Вызов функции getMathResult(5, 3) даст ответ 5---10---15
+// Вызов функции getMathResult(3, 10) даст ответ 3---6---9---12---15---18---21---24---27---30
+// Вызов функции getMathResult(10, 5) даст ответ 10---20---30---40---50
+// Вызов функции getMathResult(10, '5') даст ответ 10
+// Вызов функции getMathResult(10, 0) даст ответ 10
+// Вызов функции getMathResult(20, -5) даст ответ 20
+
+// First task
+function sayHello(name) {
+    return `Привіт, ${name}!`;
+}
+sayHello('Антон');
+
+// Second task
+function returnNeighboringNumbers(num) {
+    return [num - 1, num, num + 1];
+}
+
+returnNeighboringNumbers(5);
+
+//Third task
+function getMathResult(num, times) {
+    if (typeof(times) !== 'number' || times <= 0) {
+        return num;
+    }
+
+    let str = '';
+    for (let i=1; i<=times; i++) {
+        if (i === times) {
+            str += `${num * i}`;
+        } else {
+            str += `${num * i}---`;
+        }
+    }
+    return str;
+}
+
+getMathResult(3, 5);
