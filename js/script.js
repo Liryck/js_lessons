@@ -1,4 +1,4 @@
-'use strict';
+
 
 const numberOfFilms = +prompt('Як багато фільмів Ви подивилися?', '');
 
@@ -10,13 +10,38 @@ let personalMovieDB = {
     privat: false
 };
 
-const a = prompt('Останніх переглянутих Вами фільмів?'),
-      b = prompt('На скільки Ви його оцінете?'),
-      c = prompt('Останніх переглянутих Вами фільмів?'),
-      d = prompt('На скільки Ви його оцінете?');
+// const a = prompt('Останніх переглянутих Вами фільмів?', ''),
+//       b = prompt('На скільки Ви його оцінете?', ''),
+//       c = prompt('Останніх переглянутих Вами фільмів?', ''),
+//       d = prompt('На скільки Ви його оцінете?', '');
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+//       personalMovieDB.movies[a] = b;
+//       personalMovieDB.movies[c] = d;
+
+for (let i = 0; i < 2; i++) {
+    const a = prompt('Останніх переглянутих Вами фільмів?', ''),
+          b = prompt('На скільки Ви його оцінете?', '');
+
+    if (a != null && b != null && a != '' && b != ' && a.lenght < 50') {
+        personalMovieDB.movies[a] = b;
+        console.log('done');
+    } else {
+        console.log('error');
+        i--;
+    }
+
+    personalMovieDB.movies[a] = b;
+}
+
+if (personalMovieDB.count < 10) {
+    console.log("Переглянуто занадто мало фільмів");
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30 ) {
+    console.log("Ви молодець");
+} else if (personalMovieDB.count >= 30) {
+    console.log("Ви кіноман");
+} else {
+    console.log('Помилка');
+}
 
 console.log(personalMovieDB);
 
@@ -36,32 +61,32 @@ console.log(personalMovieDB);
 // 5. Заполните массив цифрами от 5 до 10 включительно. Помните, что элементы массива можно сформировать так же, как и обращаться к ним: arr[0]
 
 
-function firstTask() {
-    let num = 5;
-    while (num<11){
-        console.log(num);
-        num++;
-    }
+// function firstTask() {
+//     let num = 5;
+//     while (num<11){
+//         console.log(num);
+//         num++;
+//     }
     
-}
+// }
 
-function secondTask() {
-    for (let i=20; i>10; i--) {
-        if (i===13) {
-            break;
-        }
-        console.log(i);
-    }
+// function secondTask() {
+//     for (let i=20; i>10; i--) {
+//         if (i===13) {
+//             break;
+//         }
+//         console.log(i);
+//     }
     
-}
+// }
 
-function thirdTask() {
-    for (let i=2; i<11; i++) {
-        if ( i % 2 === 0){
-            console.log(i);
-        }
-    }
-}
+// function thirdTask() {
+//     for (let i=2; i<11; i++) {
+//         if ( i % 2 === 0){
+//             console.log(i);
+//         }
+//     }
+// }
 
 
 // for (let i = 2; i <= 16; i++) {
@@ -72,31 +97,31 @@ function thirdTask() {
 //     }
 // }
 
-function fourthTask() {
-    let i = 2;
-    while (i <= 16) {
-        if (i % 2 === 0) {
-            i++;
-            continue;
-        } else {
-            console.log(i);
-        }
-        i++;
-    }
+// function fourthTask() {
+//     let i = 2;
+//     while (i <= 16) {
+//         if (i % 2 === 0) {
+//             i++;
+//             continue;
+//         } else {
+//             console.log(i);
+//         }
+//         i++;
+//     }
     
-}
+// }
 
-function fifthTask() {
-    const arrayOfNumbers = [];
-    for (let i = 5; i < 11; i++) {
-        arrayOfNumbers[i - 5] = i;
-    }
+// function fifthTask() {
+//     const arrayOfNumbers = [];
+//     for (let i = 5; i < 11; i++) {
+//         arrayOfNumbers[i - 5] = i;
+//     }
 
-    console.log(arrayOfNumbers);
+//     console.log(arrayOfNumbers);
     
-    // Не трогаем
-    return arrayOfNumbers;
-}
+//     // Не трогаем
+//     return arrayOfNumbers;
+// }
 
 // Задачи:
 
@@ -111,54 +136,54 @@ function fifthTask() {
 // Должно получиться: [ 'Homework', 20, 'Shopping', 10, 5 ]
 
 // Место для первой задачи
-function firstTask() {
-    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
-    const arr = [3, 5, 8, 16, 20, 23, 50];
-    const result = [];
+// function firstTask() {
+//     // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+//     const arr = [3, 5, 8, 16, 20, 23, 50];
+//     const result = [];
 
-    // Пишем решение вот тут
-    for (let i = 0; i < arr.length; i++) {
-        result[i] = arr[i];
-    }
+//     // Пишем решение вот тут
+//     for (let i = 0; i < arr.length; i++) {
+//         result[i] = arr[i];
+//     }
 
-    console.log(result);
+//     console.log(result);
     
-    // Не трогаем
-    return result;
-}
+//     // Не трогаем
+//     return result;
+// }
 
 // Место для второй задачи
-function secondTask() {
-    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
-    const data = [5, 10, 'Shopping', 20, 'Homework'];
-    for (let i = 0; i < data.length; i++) {
-        if (typeof(data[i]) === 'number') {
-            data[i] = data[i] * 2;
-        }
-        if (typeof(data[i]) === 'string') {
-            data[i] = `${data[i]} - done`;
-        }
-    }   
-    console.log(data);
-    // Не трогаем
-    return data;
-}
+// function secondTask() {
+//     // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+//     const data = [5, 10, 'Shopping', 20, 'Homework'];
+//     for (let i = 0; i < data.length; i++) {
+//         if (typeof(data[i]) === 'number') {
+//             data[i] = data[i] * 2;
+//         }
+//         if (typeof(data[i]) === 'string') {
+//             data[i] = `${data[i]} - done`;
+//         }
+//     }   
+//     console.log(data);
+//     // Не трогаем
+//     return data;
+// }
 
 // Место для третьей задачи
-function thirdTask() {
-    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
-    const data = [5, 10, 'Shopping', 20, 'Homework'];
-    const result = [];
+// function thirdTask() {
+//     // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+//     const data = [5, 10, 'Shopping', 20, 'Homework'];
+//     const result = [];
 
-    // Пишем решение вот тут
-    for (let i = 1; i <= data.length; i++) {
-        result[i - 1] = data[data.length - i];
-    }
+//     // Пишем решение вот тут
+//     for (let i = 1; i <= data.length; i++) {
+//         result[i - 1] = data[data.length - i];
+//     }
     
-    console.log(result);
-    // Не трогаем
-    return result;
-}
+//     console.log(result);
+//     // Не трогаем
+//     return result;
+// }
 
 
 // Сейчас вам необходимо написать код, который при помощи звездочек (*) в консоли нарисует вот такую фигуру:
@@ -170,17 +195,17 @@ function thirdTask() {
 //  *********
 // ***********
 
-const lines = 5;
-let result = '';
-// Проверяется именно переменная result, формируйте строку в ней
-for (let i=0; i <= lines; i++) {
-    for (let j=0; j<lines-i; j++) {
-        result += " ";
-    }
-    for (let j=0; j<2*i+1; j++){
-        result += '*';
-    }
-    result += '\n';
-}
-console.log(result);
+// const lines = 5;
+// let result = '';
+// // Проверяется именно переменная result, формируйте строку в ней
+// for (let i=0; i <= lines; i++) {
+//     for (let j=0; j<lines-i; j++) {
+//         result += " ";
+//     }
+//     for (let j=0; j<2*i+1; j++){
+//         result += '*';
+//     }
+//     result += '\n';
+// }
+// console.log(result);
 
