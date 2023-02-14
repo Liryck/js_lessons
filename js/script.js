@@ -434,45 +434,55 @@ writeYourGenres();
 // }
 // fib(7);
 
-const personalPlanPeter = {
-    name: "Peter",
-    age: "29",
-    skills: {
-        languages: ['ru', 'eng'],
-        programmingLangs: {
-            js: '20%',
-            php: '10%'
-        },
-        exp: '1 month'
-    },
-    showAgeAndLangs: function (plan) {
-        const {age} = plan;
-        const {languages} = plan.skills;
-
-        let str = `Мені ${age} і я володію мовами:`;
-
-        languages.forEach(function(lang) {
-            str += `${lang.toUpperCase()}`;
-        });
-
-        return str;
-    }
-};
-
-personalPlanPeter.showAgeAndLangs(personalPlanPeter);
 
 
-function showExperience(plan) {
-    const {exp} = plan.skills;
+// const personalPlanPeter = {
+//     name: "Peter",
+//     age: "29",
+//     skills: {
+//         languages: ['ru', 'eng'],
+//         programmingLangs: {
+//             js: '20%',
+//             php: '10%'
+//         },
+//         exp: '1 month'
+//     },
+//     showAgeAndLangs: function (plan) {
+//         const {age} = plan;
+//         const {languages} = plan.skills;
 
-    return exp;
-}
+//         let str = `Мені ${age} і я володію мовами:`;
 
-showExperience(personalPlanPeter);
+//         languages.forEach(function(lang) {
+//             str += `${lang.toUpperCase()}`;
+//         });
 
-function showProgrammingLangs(plan) {
-    for (let)
-}
+//         return str;
+//     }
+// };
+
+// personalPlanPeter.showAgeAndLangs(personalPlanPeter);
+
+
+// function showExperience(plan) {
+//     const {exp} = plan.skills;
+
+//     return exp;
+// }
+
+// showExperience(personalPlanPeter);
+
+// function showProgrammingLangs(plan) {
+//     let str = '';
+//     const {programmingLangs} = plan.skills;
+//     for (let key in programmingLangs) {
+//         str += `Мова ${key} вивчена на ${programmingLangs[key]} \n`;
+//     }
+
+//     return str;
+// }
+
+// showProgrammingLangs(personalPlanPeter);
 
 
 // const options = {
@@ -512,3 +522,18 @@ function showProgrammingLangs(plan) {
 // }
 
 // console.log(counter);
+
+const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+
+function showFamily(arr) {
+    console.log(`Семья состоит из: ${arr}`);
+    return arr;
+}
+
+showFamily(family);
+
+const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+
+function standardizeStrings(arr) {
+    
+}
