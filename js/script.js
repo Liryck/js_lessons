@@ -433,3 +433,82 @@ writeYourGenres();
 //     return result;
 // }
 // fib(7);
+
+const personalPlanPeter = {
+    name: "Peter",
+    age: "29",
+    skills: {
+        languages: ['ru', 'eng'],
+        programmingLangs: {
+            js: '20%',
+            php: '10%'
+        },
+        exp: '1 month'
+    },
+    showAgeAndLangs: function (plan) {
+        const {age} = plan;
+        const {languages} = plan.skills;
+
+        let str = `Мені ${age} і я володію мовами:`;
+
+        languages.forEach(function(lang) {
+            str += `${lang.toUpperCase()}`;
+        });
+
+        return str;
+    }
+};
+
+personalPlanPeter.showAgeAndLangs(personalPlanPeter);
+
+
+function showExperience(plan) {
+    const {exp} = plan.skills;
+
+    return exp;
+}
+
+showExperience(personalPlanPeter);
+
+function showProgrammingLangs(plan) {
+    for (let)
+}
+
+
+// const options = {
+//     name: 'test',
+//     width: 1024,
+//     height: 1024,
+//     colors: {
+//         border: 'black',
+//         bg: 'red'
+//     },
+//     makeTest: function() {
+//         console.log("Test");
+//     }
+// };
+
+// options.makeTest();
+
+// const {border, bg} = options.colors;
+// console.log(border);
+
+// // console.log(Object.keys(options).length); 
+// // додали метод для створення масиву де ключі це його елементи. Потім додаємо властивість для визначення довжини масиву
+
+
+// let counter = 0;
+// for (let key in options) {
+//     if (typeof(options[key]) === 'object') {
+//         for (let i in options[key]) {
+//             console.log(`Властивість ${i} має значення ${options[key][i]}`);
+//             counter++;
+//         }
+//     } else {
+//         console.log(`Властивість ${key} має значення ${options[key]}`);
+//         counter++;
+        
+//     }
+// }
+
+// console.log(counter);
