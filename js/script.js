@@ -549,35 +549,35 @@ writeYourGenres();
 
 // standardizeStrings(favoriteCities);
 
-const someString = 'This is some strange string';
+// const someString = 'This is some strange string';
 
-function reverse(str) {
-    if (typeof(str) !== 'string') {
-        return "Ошибка!";
-    }
+// function reverse(str) {
+//     if (typeof(str) !== 'string') {
+//         return "Ошибка!";
+//     }
 
-    return str.split('').reverse().join('');
-}
+//     return str.split('').reverse().join('');
+// }
 
-reverse(someString);
-
-
-const baseCurrencies = ['USD', 'EUR'];
-const additionalCurrencies = ['UAH', 'PLZ', 'CNY'];
+// reverse(someString);
 
 
-function availableCurr(arr, missingCurr) {
-    let str = '';
-    arr.lenght === 0 ? str = 'Нет доступных валют' : str = 'Доступные валюты:\n';
+// const baseCurrencies = ['USD', 'EUR'];
+// const additionalCurrencies = ['UAH', 'PLZ', 'CNY'];
+
+
+// function availableCurr(arr, missingCurr) {
+//     let str = '';
+//     arr.lenght === 0 ? str = 'Нет доступных валют' : str = 'Доступные валюты:\n';
     
-    arr.forEach(function(curr, i){
-        if (curr !== missingCurr) {
-            str += `${curr}\n`;
-        }
-    });
+//     arr.forEach(function(curr, i){
+//         if (curr !== missingCurr) {
+//             str += `${curr}\n`;
+//         }
+//     });
 
-    return str;
+//     return str;
     
-}
+// }
 
-availableCurr([...baseCurrencies, ...additionalCurrencies], 'CNY');
+// availableCurr([...baseCurrencies, ...additionalCurrencies], 'CNY');
